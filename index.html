@@ -52,23 +52,11 @@ header {
   gap:10px;
 }
 
-.logo { display:flex; align-items:center; gap:10px; flex-shrink:0; text-decoration:none; }
-.logo-icon {
-  width:38px; height:38px; flex-shrink:0;
-}
-.logo-text { display:flex; flex-direction:column; line-height:1; gap:1px; }
-.logo-brand {
-  font-family:var(--font-head); font-size:17px; font-weight:900;
-  letter-spacing:-0.3px; color:var(--text-dark);
-}
-.logo-brand em { color:var(--rose-deep); font-style:normal; }
-.logo-sub {
-  font-family:var(--font-script); font-size:13px;
-  color:var(--rose-deep); line-height:1;
-}
+.logo { display:flex; align-items:center; text-decoration:none; flex-shrink:0; }
+.logo-icon { width:38px; height:38px; flex-shrink:0; }
 
 .header-nav {
-  display:flex; align-items:center; gap:6px; flex-wrap:wrap;
+  display:flex; align-items:center; gap:6px; flex-wrap:nowrap; overflow-x:auto;
 }
 .nav-pill {
   display:flex; align-items:center; gap:5px;
@@ -670,12 +658,14 @@ footer {
   .productos-grid { grid-template-columns:1fr 1fr; }
   .stats-grid { grid-template-columns:1fr 1fr; }
   .esp-grid { grid-template-columns:1fr; }
+  .nav-pill { padding:6px 10px; font-size:10px; white-space:nowrap; }
+  .nav-pill svg { display:none; }
+  .header-nav { gap:5px; scrollbar-width:none; }
+  .header-nav::-webkit-scrollbar { display:none; }
 }
 @media(max-width:420px){
   .productos-grid { grid-template-columns:1fr; }
-  .header-nav { gap:4px; }
-  .nav-pill { padding:6px 10px; font-size:10px; }
-  .nav-pill svg { display:none; }
+  .nav-pill { padding:5px 9px; font-size:10px; }
 }
 </style>
 </head>
@@ -692,24 +682,17 @@ footer {
     <svg class="logo-icon" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
       <circle cx="40" cy="40" r="38" fill="#f5ebe3" stroke="#d4788a" stroke-width="2.5"/>
       <circle cx="40" cy="40" r="30" fill="#f5ebe3" stroke="#d4788a" stroke-width="1.5"/>
-      <!-- Citrus top-right -->
       <path d="M40 12 L40 40 L62 40 A22 22 0 0 0 40 18Z" fill="#f5b833" stroke="#1a1a1a" stroke-width="1.5" stroke-linejoin="round"/>
       <line x1="40" y1="12" x2="62" y2="40" stroke="#1a1a1a" stroke-width="1"/>
       <line x1="40" y1="40" x2="55" y2="19" stroke="#1a1a1a" stroke-width="1"/>
       <line x1="40" y1="40" x2="62" y2="28" stroke="#1a1a1a" stroke-width="1"/>
-      <!-- Strawberry bottom-left -->
       <path d="M40 40 L18 40 A22 22 0 0 0 40 62 Z" fill="#e07090" stroke="#1a1a1a" stroke-width="1.5" stroke-linejoin="round"/>
       <circle cx="27" cy="50" r="1.8" fill="#1a1a1a"/>
       <circle cx="33" cy="57" r="1.8" fill="#1a1a1a"/>
       <circle cx="38" cy="50" r="1.8" fill="#1a1a1a"/>
-      <!-- Dividers -->
       <line x1="40" y1="18" x2="40" y2="62" stroke="#1a1a1a" stroke-width="1.8"/>
       <line x1="18" y1="40" x2="62" y2="40" stroke="#1a1a1a" stroke-width="1.8"/>
     </svg>
-    <div class="logo-text">
-      <span class="logo-brand">NUTR<em>A</em>L<em>E</em>XA</span>
-      <span class="logo-sub">Alexa Tavera</span>
-    </div>
   </a>
 
   <div class="header-nav">
